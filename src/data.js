@@ -1,4 +1,4 @@
-[
+const data = [
   {
     name: "Финансовый аналитик",
     mainSkills: ["Excel", "SQL", "VBA", "1С"],
@@ -95,3 +95,4 @@
     otherSkills: ["Figma", "Sketch", "Shopify"],
   },
 ]
+export default data;

@@ -4,3 +4,5 @@
 
 ## Available Scripts
 
+react-spring
+deploy
