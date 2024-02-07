@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Competency } from "./Competency";
 import data from "../data";
+import './index.css';
 
 const SkillGraph = () => {
     const [selectedSkill, setSelectedSkill] = useState(null);
@@ -10,7 +11,7 @@ const SkillGraph = () => {
     };
 
     return (
-        <div>
+        <div className="SkillGraph">
             {data.map((competency, index) => (
                 <Competency
                     key={index}

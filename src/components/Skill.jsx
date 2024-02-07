@@ -1,8 +1,9 @@
 import React from "react";
+import './index.css';
 
 export const Skill = ({ skill, isMainSkill, selected, onClick }) => {
     return (
-        <div
+        <div className="Skill"
             style={{
                 fontWeight: selected ? "bold" : "normal",
                 color: isMainSkill ? "orange" : "purple"

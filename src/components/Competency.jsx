@@ -1,9 +1,10 @@
 import React from "react";
 import { Skill } from "./Skill";
+import './index.css';
 
 export const Competency = ({ competency, selectedSkill, onSkillClick }) => {
     return (
-        <div>
+        <div className="Competency">
             <h3>{competency.name}</h3>
             {competency.mainSkills.map((skill, index) => (
                 <Skill

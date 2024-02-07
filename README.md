@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+# https://8lou.github.io/tz_edu.mos.ru/
 
-
-
-## Available Scripts
-
+ Getting Started with Create React App
+## Technologies:
 react-spring
 deploy
