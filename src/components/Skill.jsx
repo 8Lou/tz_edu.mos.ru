@@ -3,7 +3,8 @@ import './index.css';
 
 export const Skill = ({ skill, isMainSkill, selected, onClick }) => {
     return (
-        <div className="Skill"
+        <div className={`skill ${isMainSkill ? 'main-skill'
+            : 'other-skill'} ${selected ? 'selected' : ''}`}
             style={{
                 fontWeight: selected ? "bold" : "normal",
                 color: isMainSkill ? "orange" : "purple"

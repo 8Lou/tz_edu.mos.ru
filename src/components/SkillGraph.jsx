@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Competency } from "./Competency";
+import Competency from "./Competency";
 import data from "../data";
 import './index.css';
 
@@ -11,7 +11,7 @@ const SkillGraph = () => {
     };
 
     return (
-        <div className="SkillGraph">
+        <div className="skillGraph">
             {data.map((competency, index) => (
                 <Competency
                     key={index}
