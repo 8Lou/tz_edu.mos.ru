@@ -1,16 +1,50 @@
-import React from 'react';
-import './index.css';
-import SkillGraph from './components/SkillGraph';
+import React, { useState } from 'react';
+import data from './data/data';
+import Skill from './components/Skill';
+import Competence from './components/Competence';
+import DoughnutChart from './components/Chart';
 
-function App() {
+const App = () => {
+  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedCompetence, setSelectedCompetence] = useState(null);
+
+  const handleSkillClick = (skill) => {
+    setSelectedSkill(skill);
+  };
+
+  const handleCompetenceClick = (competence) => {
+    setSelectedCompetence(competence);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>График компетенций</h1>
-      </header>
-      <main>
-        <SkillGraph />
-      </main>
+    <div className="app">
+      <DoughnutChart data={data} />
+      <div className="skills">
+        {data.map(entry => (
+          <Skill
+            key={entry.name}
+            skill={entry.name}
+            onClick={() => handleSkillClick(entry.name)}
+          />
+        ))}
+      </div>
+
+      <div className="competences">
+        {selectedSkill && data.find(entry => entry.name === selectedSkill).mainSkills.map((skill, index) => (
+          <Competence
+            key={index}
+            competence={skill}
+            onClick={() => handleCompetenceClick(skill)}
+          />
+        ))}
+        {selectedSkill && data.find(entry => entry.name === selectedSkill).otherSkills.map((skill, index) => (
+          <Competence
+            key={index}
+            competence={skill}
+            onClick={() => handleCompetenceClick(skill)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
