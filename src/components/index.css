@@ -1,68 +1,43 @@
-.competency {
-  position: relative;
-  display: inline-block; /* чтобы элементы располагались в ряд */
-
-  .outer-circle {
-    position: relative;
-    width: 200px; /* размер внешнего круга */
-    height: 200px; /* размер внешнего круга */
-    border: 2px solid #000;  /* стиль обводки */
-    border-radius: 50%; /* круглое отображение */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .inner-circle {
-    position: absolute;
-    width: 100px; /* размер внутреннего круга */
-    height: 100px; /* размер внутреннего круга */
-    border: 2px solid #000; /* стиль обводки */
-    border-radius: 50%; /* круглое отображение */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .skill {
-      width: 30px; /* размер точек */
-      height: 30px; /* размер точек */
-      line-height: 30px; /* для вертикального центрирования текста внутри точек */
-      border-radius: 50%; /* создание круглых точек */
-      text-align: center; /* центрирование текста внутри точек */
-      position: absolute;
-    }
-
-    .main-skill {
-      background-color: #ff9900; /* цвет основных навыков */
-    }
-
-    .other-skill {
-      background-color: #cc66ff; /* цвет дополнительных навыков */
-    }
-  }
-}
-
-.skillGraph {
-  position: relative;
+.chart {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Добавьте другие свойства стиля по мере необходимости */
+  height: 400px;
+  width: 400px;
+  border: 1px solid #ccc;
 }
 
-.competency {
-  /* Стили для родительского контейнера компетенции */
+.line {
+  stroke: orange; /* цвет основных навыков */
+  stroke-width: 2px;
+  animation: drawLine 2s forwards;
 }
 
-.inner-circle {
-  /* Стили для внутреннего круга с навыками */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 100%;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.skill {
+  padding: 10px;
+  margin: 5px;
+  background-color: lightblue;
+  cursor: pointer;
 }
 
-.outer-circle {
-  /* Стили для внешнего круга с названием компетенции */
+.skill:hover {
+  background-color: lightcyan;
+}
+.competence {
+  padding: 5px;
+  margin: 2px;
+  background-color: lightgreen;
+  cursor: pointer;
 }
 
-/* Стили для линий, соединяющих компетенции и навыки */
-.connection {
-  /* Стили для линий связей */
+.competence:hover {
+  background-color: lightgoldenrodyellow;
 }

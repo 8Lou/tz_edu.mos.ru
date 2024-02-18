@@ -1,17 +1,12 @@
-import React from "react";
+import React from 'react';
 import './index.css';
 
-export const Skill = ({ skill, isMainSkill, selected, onClick }) => {
+const Skill = ({ skill, onClick }) => {
     return (
-        <div className={`skill ${isMainSkill ? 'main-skill'
-            : 'other-skill'} ${selected ? 'selected' : ''}`}
-            style={{
-                fontWeight: selected ? "bold" : "normal",
-                color: isMainSkill ? "orange" : "purple"
-            }}
-            onClick={onClick}
-        >
+        <div className="skill" onClick={onClick}>
             {skill}
         </div>
     );
-};
+}
+
+export default Skill;

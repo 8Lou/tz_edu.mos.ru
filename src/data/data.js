@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     name: "Финансовый аналитик",
     mainSkills: ["Excel", "SQL", "VBA", "1С"],
