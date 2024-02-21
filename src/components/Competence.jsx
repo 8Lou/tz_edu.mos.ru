@@ -9,12 +9,6 @@ const Competence = ({ competence, skill, onClick }) => {
             <div className={`circle ${isActive ? 'activeCircle' : ''}`}></div>
             <div className={`competenceName`}>{competence}</div>
         </div>
-
-        // <div className="competence" onClick={onClick}>
-        //     <div className="circle"></div>
-        //     <div className="competenceName">{competence}</div>
-        // </div>
-
     );
 }
 
