@@ -4,7 +4,8 @@ import './index.css';
 const Skill = ({ skill, onClick }) => {
     return (
         <div className="skill" onClick={onClick}>
-            {skill}
+            <div className="circle"></div>
+            <div className="competenceName">{skill}</div>
         </div>
     );
 }

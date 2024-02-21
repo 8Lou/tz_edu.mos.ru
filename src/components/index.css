@@ -34,10 +34,30 @@
 .competence {
   padding: 5px;
   margin: 2px;
-  background-color: lightgreen;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
-
-.competence:hover {
-  background-color: lightgoldenrodyellow;
+.competence .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(235, 189, 124);
+  margin-right: 10px;
+}
+.competence .competenceName {
+  font-size: 12px;
+  font-weight: 700;
+}
+.competence .circle:hover {
+  background-color: rgb(221, 111, 21);
+}
+.canvas {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  width: 33.3333%;
+  height: 100vh;
+  text-align: center;
 }
