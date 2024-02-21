@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tz_edu.mos.ru/static/css/main.4895dca3.css",
-    "main.js": "/tz_edu.mos.ru/static/js/main.cce9706c.js",
+    "main.css": "/tz_edu.mos.ru/static/css/main.97512c83.css",
+    "main.js": "/tz_edu.mos.ru/static/js/main.377a58ea.js",
     "index.html": "/tz_edu.mos.ru/index.html",
-    "main.4895dca3.css.map": "/tz_edu.mos.ru/static/css/main.4895dca3.css.map",
-    "main.cce9706c.js.map": "/tz_edu.mos.ru/static/js/main.cce9706c.js.map"
+    "main.97512c83.css.map": "/tz_edu.mos.ru/static/css/main.97512c83.css.map",
+    "main.377a58ea.js.map": "/tz_edu.mos.ru/static/js/main.377a58ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.4895dca3.css",
-    "static/js/main.cce9706c.js"
+    "static/css/main.97512c83.css",
+    "static/js/main.377a58ea.js"
   ]
 }
