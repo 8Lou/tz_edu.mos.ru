@@ -1,11 +1,13 @@
 import React from 'react';
 import './index.css';
 
-const Skill = ({ skill, onClick }) => {
+const Skill = ({ skill, onClick, activeSkills }) => {
+    const isActive = activeSkills.includes(skill);
+
     return (
-        <div className="skill" onClick={onClick}>
-            <div className="circle"></div>
-            <div className="competenceName">{skill}</div>
+        <div className={`skill ${isActive ? 'active' : ''}`} onClick={() =>
+            onClick(skill)}>
+            {skill}
         </div>
     );
 }

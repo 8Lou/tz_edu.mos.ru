@@ -7,6 +7,7 @@ import DoughnutChart from './components/Chart';
 const App = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [selectedCompetence, setSelectedCompetence] = useState(null);
+  const [activeSkills, setActiveSkills] = useState([]);
 
   const handleSkillClick = (skill) => {
     setSelectedSkill(skill);
@@ -14,6 +15,15 @@ const App = () => {
 
   const handleCompetenceClick = (competence) => {
     setSelectedCompetence(competence);
+  };
+  const handleToggleSkill = (skill) => {
+    setActiveSkills(prev => {
+      if (prev.includes(skill)) {
+        return prev.filter(item => item !== skill);
+      } else {
+        return [...prev, skill];
+      }
+    });
   };
 
   return (
@@ -24,26 +34,31 @@ const App = () => {
           <Skill
             key={entry.name}
             skill={entry.name}
+            activeSkills={activeSkills}
             onClick={() => handleSkillClick(entry.name)}
           />
         ))}
       </div>
 
       <div className="competences">
-        {selectedSkill && data.find(entry => entry.name === selectedSkill).mainSkills.map((skill, index) => (
-          <Competence
-            key={index}
-            competence={skill}
-            onClick={() => handleCompetenceClick(skill)}
-          />
-        ))}
-        {selectedSkill && data.find(entry => entry.name === selectedSkill).otherSkills.map((skill, index) => (
-          <Competence
-            key={index}
-            competence={skill}
-            onClick={() => handleCompetenceClick(skill)}
-          />
-        ))}
+        {selectedSkill && data.find(entry => entry.name ===
+          selectedSkill).mainSkills.map((skill) => (
+            <Competence
+              key={skill}
+              competence={skill}
+              skill={selectedCompetence}
+              onClick={() => handleCompetenceClick(skill)}
+            />
+          ))}
+        {selectedSkill && data.find(entry => entry.name ===
+          selectedSkill).otherSkills.map((skill) => (
+            <Competence
+              key={skill}
+              competence={skill}
+              skill={selectedCompetence}
+              onClick={() => handleCompetenceClick(skill)}
+            />
+          ))}
       </div>
     </div>
   );

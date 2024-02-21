@@ -27,7 +27,9 @@
   background-color: lightblue;
   cursor: pointer;
 }
-
+.skill.active {
+  background-color: #ffcc00;
+}
 .skill:hover {
   background-color: lightcyan;
 }
@@ -39,20 +41,26 @@
   align-items: center;
   margin-bottom: 10px;
 }
-.competence .circle {
+.circle {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: rgb(235, 189, 124);
   margin-right: 10px;
 }
+.activeCircle {
+  background-color: rgb(221, 111, 21);
+}
 .competence .competenceName {
   font-size: 12px;
   font-weight: 700;
 }
-.competence .circle:hover {
+/* .competence.active .circle {
   background-color: rgb(221, 111, 21);
-}
+} */
+/* .competence .circle:hover {
+  background-color: rgb(221, 111, 21);
+} */
 .canvas {
   box-sizing: border-box;
   display: inline-block;
